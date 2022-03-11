@@ -15,5 +15,6 @@ public class Rebelde {
     private Genero genero;
     private Localizacao localizacao;
     private Inventario inventario;
+    private boolean traidor = false;
 
 }
