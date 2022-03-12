@@ -1,6 +1,6 @@
 package br.com.letscode.apistarwars.dto;
 
-import br.com.letscode.apistarwars.enums.Genero;
+import br.com.letscode.apistarwars.Utils.Genero;
 import lombok.Getter;
 import lombok.Setter;
 

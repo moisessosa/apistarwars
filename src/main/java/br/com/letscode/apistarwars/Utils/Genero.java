@@ -1,4 +1,4 @@
-package br.com.letscode.apistarwars.enums;
+package br.com.letscode.apistarwars.Utils;
 
 public enum Genero {
     FEMENINO,
