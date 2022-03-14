@@ -12,5 +12,15 @@ public class Item {
     private TypeItem nome;
     private Integer pontos;
     private Integer quantidade;
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", nome=" + nome +
+                ", pontos=" + pontos +
+                ", quantidade=" + quantidade +
+                '}';
+    }
+
 
 }

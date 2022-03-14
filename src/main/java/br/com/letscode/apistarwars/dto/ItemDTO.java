@@ -1,5 +1,6 @@
 package br.com.letscode.apistarwars.dto;
 
+import br.com.letscode.apistarwars.Utils.TypeItem;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,8 +8,9 @@ import lombok.Setter;
 @Setter
 public class ItemDTO {
 
-    private String id;
-    private String nome;
-    private String quantidade;
+    private Long id;
+    private TypeItem nome;
+    private Integer pontos;
+    private Integer quantidade;
 
 }

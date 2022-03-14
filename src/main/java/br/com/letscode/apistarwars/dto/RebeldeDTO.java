@@ -8,12 +8,18 @@ import lombok.Setter;
 @Setter
 public class RebeldeDTO {
 
-    private String id;
+    private Long id;
     private String nome;
     private Integer idade;
     private Integer acusacoes = 0;
     private Genero genero;
     private LocalizacaoDTO localizacao;
     private InventarioDTO inventario;
+    private boolean traidor = false;
 
+//    public void setLocalizacao(String latitude, String longitude, String nomeBase) {
+//        this.localizacao.setLatitude(latitude);
+//        this.localizacao.setLongitude(longitude);
+//        this.localizacao.setLongitude(nomeBase);
+ //   }
 }

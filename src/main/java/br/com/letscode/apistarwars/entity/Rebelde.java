@@ -3,8 +3,11 @@ package br.com.letscode.apistarwars.entity;
 import br.com.letscode.apistarwars.Utils.Genero;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 public class Rebelde {
 
@@ -18,6 +21,23 @@ public class Rebelde {
     private boolean traidor = false;
     private Integer acusacoes = 0;
 
-    public Rebelde(long id, String moises, int idade, Genero masculino, Localizacao alfa, Inventario inventario, boolean traidor) {
+    public Rebelde(Long id, String moises, Integer idade, Genero masculino, Localizacao alfa, Inventario inventario, boolean traidor) {
+    }
+    public Rebelde(){
+
+    }
+
+    @Override
+    public String toString() {
+        return "Rebelde{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", genero=" + genero +
+                ", localizacao=" + localizacao +
+                ", inventario=" + inventario +
+                ", traidor=" + traidor +
+                ", acusacoes=" + acusacoes +
+                '}';
     }
 }
