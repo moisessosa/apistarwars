@@ -21,10 +21,13 @@ public class Rebelde {
     private boolean traidor = false;
     private Integer acusacoes = 0;
 
-    public Rebelde(Long id, String moises, Integer idade, Genero masculino, Localizacao alfa, Inventario inventario, boolean traidor) {
-    }
+
     public Rebelde(){
 
+    }
+
+    public void setAcusacoes() {
+        this.acusacoes++;
     }
 
     @Override

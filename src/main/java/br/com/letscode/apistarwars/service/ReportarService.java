@@ -9,6 +9,7 @@ import br.com.letscode.apistarwars.entity.Rebelde;
 import br.com.letscode.apistarwars.repository.RebeldeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestAttribute;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,4 +51,30 @@ public class ReportarService {
 //               entidade.getLocalizacao().getNomeBase());
         return rebeldeDTO;
     }
+//    public static boolean reportarRebelde(Long id){
+//        return reportar();
+//    }
+public Rebelde reportar(Long id){
+
+        //tem que devolver é um Rebelde DTO
+    List<Rebelde>rebeldes =repository.getAll();
+    System.out.println(rebeldes);
+    for (int i = 0; i < rebeldes.size() ; i++) {
+        System.out.println("entro no for");
+        Rebelde rebelde = rebeldes.get(i);
+        System.out.println(rebelde);
+        if(rebelde.getId().equals(id)){
+            rebelde.setAcusacoes();
+            if(rebelde.getAcusacoes()>=3){
+                rebelde.setTraidor(true);
+                System.out.println( rebelde);
+                return rebelde;
+            }
+
+        }
+
+    }
+        return null;
+
+}
 }
