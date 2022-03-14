@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Inventario {
 
-//    private Long idInventario;
+   private Long idInventario;
     private List<Item> itensInventario;
 
 }

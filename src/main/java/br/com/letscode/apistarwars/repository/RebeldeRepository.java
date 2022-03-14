@@ -35,24 +35,24 @@ public class RebeldeRepository {
 
     //criamos 2 Inventarios para provas
 
-    private static Inventario inventario = new Inventario(Arrays.asList(comida, agua,municao,arma));
-    private static Inventario inventario2 = new Inventario(Arrays.asList(comida2, agua2,municao2,arma2));
+    private static Inventario inventario = new Inventario(1L,Arrays.asList(comida, agua,municao,arma));
+    private static Inventario inventario2 = new Inventario(2L,Arrays.asList(comida2, agua2,municao2,arma2));
 
     static{
 
         rebeldes.addAll(
                 Arrays.asList(
             new Rebelde(1L,"Moises",40, Genero.MASCULINO,
-                    new Localizacao("45°92'3","90º87'6","Alfa"),
-                    new Inventario(Arrays.asList(comida, agua,municao,arma)),false,0),
+                    new Localizacao(1L,"45°92'3","90º87'6","Alfa"),
+                    new Inventario(3l,Arrays.asList(comida, agua,municao,arma)),false,0),
 
-            new Rebelde(2L,"Patricia",25,Genero.FEMENINO,new Localizacao("4°2'13",
+            new Rebelde(2L,"Patricia",25,Genero.FEMENINO,new Localizacao(2L,"4°2'13",
                     "9º7'6","Beta"),inventario2,false,0),
 
-            new Rebelde(3L,"Lucas",25,Genero.MASCULINO,new Localizacao("88°8'8",
+            new Rebelde(3L,"Lucas",25,Genero.MASCULINO,new Localizacao(3L,"88°8'8",
                     "0º77'6","Omega"),inventario,false,0),
 
-            new Rebelde(4L,"Nattana",26,Genero.FEMENINO,new Localizacao("5°92'3",
+            new Rebelde(4L,"Nattana",26,Genero.FEMENINO,new Localizacao(4L,"5°92'3",
                     "90º7'6","Gama"),inventario2,true,0)
         ));
     }

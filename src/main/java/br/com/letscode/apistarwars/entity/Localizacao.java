@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter
 public class Localizacao {
 
-    //private String idLoc;
+    private Long idLoc;
     private String latitude;
     private String longitude;
     private String nomeBase;
