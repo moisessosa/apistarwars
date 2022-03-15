@@ -46,13 +46,13 @@ public class RebeldeRepository {
                     new Localizacao(1L,"45°92'3","90º87'6","Alfa"),
                     new Inventario(3l,Arrays.asList(comida, agua,municao,arma)),false,0),
 
-            new Rebelde(2L,"Patricia",25,Genero.FEMENINO,new Localizacao(2L,"4°2'13",
+            new Rebelde(2L,"Patricia",25,Genero.FEMININO,new Localizacao(2L,"4°2'13",
                     "9º7'6","Beta"),inventario2,false,0),
 
             new Rebelde(3L,"Lucas",25,Genero.MASCULINO,new Localizacao(3L,"88°8'8",
                     "0º77'6","Omega"),inventario,false,0),
 
-            new Rebelde(4L,"Nattana",26,Genero.FEMENINO,new Localizacao(4L,"5°92'3",
+            new Rebelde(4L,"Nattana",26,Genero.FEMININO,new Localizacao(4L,"5°92'3",
                     "90º7'6","Gama"),inventario2,true,0)
         ));
     }

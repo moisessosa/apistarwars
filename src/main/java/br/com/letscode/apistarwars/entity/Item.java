@@ -13,6 +13,4 @@ public class Item {
     private Integer pontos;
     private Integer quantidade;
 
-
-
 }

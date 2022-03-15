@@ -14,6 +14,6 @@ import java.util.List;
 public class Inventario {
 
    private Long idInventario;
-    private List<Item> itensInventario;
+   private List<Item> itensInventario;
 
 }

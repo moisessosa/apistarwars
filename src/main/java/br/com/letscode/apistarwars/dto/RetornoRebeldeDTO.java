@@ -6,9 +6,9 @@ import br.com.letscode.apistarwars.entity.Localizacao;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
 @Setter
-public class RebeldeDTO {
+@Getter
+public class RetornoRebeldeDTO {
 
     private Long id;
     private String nome;
@@ -19,9 +19,4 @@ public class RebeldeDTO {
     private Inventario inventario;
     private boolean traidor = false;
 
-//    public void setLocalizacao(String latitude, String longitude, String nomeBase) {
-//        this.localizacao.setLatitude(latitude);
-//        this.localizacao.setLongitude(longitude);
-//        this.localizacao.setLongitude(nomeBase);
- //   }
 }
