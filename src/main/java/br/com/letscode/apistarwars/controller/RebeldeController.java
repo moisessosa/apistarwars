@@ -43,12 +43,10 @@ public class RebeldeController {
     }
 
     @PutMapping("{id}/localizacao")
-    public RetornaLocalizacaoRebeldeDTO atualizarLocalizacao(@RequestBody LocalizacaoDTO localizacaoDTO, @RequestParam (name = "id")Long id) {
-        try {
+    public RetornaLocalizacaoRebeldeDTO atualizarLocalizacao(@RequestBody LocalizacaoDTO localizacaoDTO, @RequestParam (name = "id")Long id) throws Exception {
+
             return this.rebeldeService.atualizarLocalizacao(id, localizacaoDTO);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 
 }

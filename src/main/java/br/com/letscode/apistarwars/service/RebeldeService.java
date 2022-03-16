@@ -27,7 +27,7 @@ public class RebeldeService {
         rebeldeEntidade.setIdade(rebeldeDTO.getIdade());
         rebeldeEntidade.setGenero(rebeldeDTO.getGenero());
 
-        rebeldeEntidade.setLocalizacao(new Localizacao(Double.valueOf((Math.random()*1000)).longValue(),rebeldeDTO.getLocalizacao().getLatitude(),
+        rebeldeEntidade.setLocalizacao(new Localizacao(Double.valueOf((Math.random() * 1000)).longValue(), rebeldeDTO.getLocalizacao().getLatitude(),
                 rebeldeDTO.getLocalizacao().getLongitude(),
                 rebeldeDTO.getLocalizacao().getNomeBase()));
         //rebeldeEntidade.setInventario(rebeldeDTO.getInventario());
@@ -64,8 +64,8 @@ public class RebeldeService {
         return retornoRebeldeDTO;
     }
 
-    public RetornaLocalizacaoRebeldeDTO atualizarLocalizacao (Long id, LocalizacaoDTO localizacao) throws Exception {
-        Localizacao novaLocalizacao = new Localizacao(Double.valueOf((Math.random()*1000)).longValue(), localizacao.getLatitude(), localizacao.getLongitude(), localizacao.getNomeBase());
+    public RetornaLocalizacaoRebeldeDTO atualizarLocalizacao(Long id, LocalizacaoDTO localizacao) throws Exception {
+        Localizacao novaLocalizacao = new Localizacao(Double.valueOf((Math.random() * 1000)).longValue(), localizacao.getLatitude(), localizacao.getLongitude(), localizacao.getNomeBase());
         try {
             Rebelde rebelde = rebeldeRepository.getById(id);
             RetornoRebeldeDTO rebeldeAtualizado = deEntidadeParaDTO(rebelde);
@@ -75,5 +75,7 @@ public class RebeldeService {
             e.printStackTrace();
             throw new Exception();
         }
+
+    }
 
 }
