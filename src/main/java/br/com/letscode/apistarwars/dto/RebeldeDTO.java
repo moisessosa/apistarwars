@@ -29,12 +29,12 @@ public class RebeldeDTO {
     private InventarioDTO inventario;
     private boolean traidor = false;
 
-    public Inventario getInventario() {
-        List<Item> lista = new ArrayList<>();
-        lista.addAll((Collection) inventario.getItensInventario());
-        Inventario inventarioEntity = new Inventario(Double.valueOf((Math.random()*1000)).longValue(),lista);
-        return inventarioEntity;
-    }
+//    public Inventario getInventario() {
+//        List<Item> lista = new ArrayList<>();
+//        lista.addAll((Collection) inventario.getItensInventario());
+//        Inventario inventarioEntity = new Inventario(Double.valueOf((Math.random()*1000)).longValue(),lista);
+//        return inventarioEntity;
+//    }
 //    public void setLocalizacao(String latitude, String longitude, String nomeBase) {
 //        this.localizacao.setLatitude(latitude);
 //        this.localizacao.setLongitude(longitude);
