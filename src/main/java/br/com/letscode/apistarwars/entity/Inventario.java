@@ -16,4 +16,5 @@ public class Inventario {
    private Long idInventario;
    private List<Item> itensInventario;
 
+
 }

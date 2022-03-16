@@ -1,12 +1,17 @@
 package br.com.letscode.apistarwars.service;
 
+import br.com.letscode.apistarwars.dto.ItemDTO;
 import br.com.letscode.apistarwars.dto.RebeldeDTO;
 import br.com.letscode.apistarwars.dto.RetornoRebeldeDTO;
+import br.com.letscode.apistarwars.entity.Inventario;
+import br.com.letscode.apistarwars.entity.Item;
+import br.com.letscode.apistarwars.entity.Localizacao;
 import br.com.letscode.apistarwars.entity.Rebelde;
 import br.com.letscode.apistarwars.repository.RebeldeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,8 +28,14 @@ public class RebeldeService {
         rebeldeEntidade.setNome(rebeldeDTO.getNome());
         rebeldeEntidade.setIdade(rebeldeDTO.getIdade());
         rebeldeEntidade.setGenero(rebeldeDTO.getGenero());
-        rebeldeEntidade.setLocalizacao(rebeldeDTO.getLocalizacao());
+
+        rebeldeEntidade.setLocalizacao(new Localizacao(Double.valueOf((Math.random()*1000)).longValue(),rebeldeDTO.getLocalizacao().getLatitude(),
+                rebeldeDTO.getLocalizacao().getLongitude(),
+                rebeldeDTO.getLocalizacao().getNomeBase()));
         rebeldeEntidade.setInventario(rebeldeDTO.getInventario());
+//        List<Item> lista = new ArrayList<>();
+//        lista.addAll(rebeldeDTO.getInventario().getItensInventario().stream().collect());
+//        rebeldeEntidade.setInventario();
 
         Rebelde rebeldeSalvo = rebeldeRepository.salvar(rebeldeEntidade);
 
