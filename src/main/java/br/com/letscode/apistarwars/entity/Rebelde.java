@@ -21,18 +21,13 @@ public class Rebelde {
     private boolean traidor = false;
     private Integer acusacoes = 0;
 
-    public Rebelde(Long id, String nome, Integer idade, Genero genero, Localizacao localizacao, Inventario inventario, boolean traidor) {
-        this.id = id;
-        this.nome = nome;
-        this.idade = idade;
-        this.genero = genero;
-        this.localizacao = localizacao;
-        this.inventario = inventario;
-        this.traidor = traidor;
-    }
 
     public Rebelde(){
 
+    }
+
+    public void setAcusacoes() {
+        this.acusacoes++;
     }
 
     @Override
