@@ -23,15 +23,15 @@ public class RebeldeRepository {
 
     private static List<Rebelde> rebeldes = new ArrayList<>();
     //criamos varios Itens
-    private static Item comida = new Item(1l,TypeItem.COMIDA,ItemsValue.COMIDA,3);
-    private static Item agua = new Item(2l,TypeItem.AGUA,ItemsValue.AGUA,2);
-    private static Item municao = new Item(3l,TypeItem.MUNICAO,ItemsValue.MUNICAO,4);
-    private static Item arma =  new Item(4l,TypeItem.ARMA,ItemsValue.ARMA,1);
+    private static Item comida = new Item(1l,TypeItem.COMIDA,3);
+    private static Item agua = new Item(2l,TypeItem.AGUA,2);
+    private static Item municao = new Item(3l,TypeItem.MUNICAO,4);
+    private static Item arma =  new Item(4l,TypeItem.ARMA,1);
     //
-    private static Item comida2 = new Item(5l,TypeItem.COMIDA,ItemsValue.COMIDA,6);
-    private static Item agua2 = new Item(6l,TypeItem.AGUA,ItemsValue.AGUA,4);
-    private static Item municao2 = new Item(7l,TypeItem.MUNICAO,ItemsValue.MUNICAO,2);
-    private static Item arma2 =  new Item(8l,TypeItem.ARMA,ItemsValue.ARMA,3);
+    private static Item comida2 = new Item(5l,TypeItem.COMIDA,6);
+    private static Item agua2 = new Item(6l,TypeItem.AGUA,4);
+    private static Item municao2 = new Item(7l,TypeItem.MUNICAO,2);
+    private static Item arma2 =  new Item(8l,TypeItem.ARMA,3);
 
     //criamos 2 Inventarios para provas
 
