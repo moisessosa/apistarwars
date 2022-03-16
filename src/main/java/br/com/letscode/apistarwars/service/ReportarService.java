@@ -54,7 +54,7 @@ public class ReportarService {
 //    public static boolean reportarRebelde(Long id){
 //        return reportar();
 //    }
-public Rebelde reportar(Long id){
+public RebeldeDTO reportar(Long id){
 
         //tem que devolver é um Rebelde DTO
     List<Rebelde>rebeldes =repository.getAll();
@@ -62,15 +62,31 @@ public Rebelde reportar(Long id){
     for (int i = 0; i < rebeldes.size() ; i++) {
         System.out.println("entro no for");
         Rebelde rebelde = rebeldes.get(i);
-        System.out.println(rebelde);
+
+        RebeldeDTO rebeldeDTO = new RebeldeDTO();
+        rebeldeDTO.setId(rebelde.getId());
+        rebeldeDTO.setNome(rebelde.getNome());
+        rebeldeDTO.setIdade(rebelde.getIdade());
+        rebeldeDTO.setAcusacoes(rebelde.getAcusacoes());
+        rebeldeDTO.setGenero(rebelde.getGenero());
+
+        //rebeldeDTO.setInventario(new InventarioDTO((List<ItemDTO>) rebelde.getInventario()));
+        rebeldeDTO.setLocalizacao( new LocalizacaoDTO(rebelde.getLocalizacao().getLatitude(),
+                rebelde.getLocalizacao().getLongitude(),
+                rebelde.getLocalizacao().getNomeBase()));
+
         if(rebelde.getId().equals(id)){
+
             rebelde.setAcusacoes();
+            rebeldeDTO.setAcusacoes(rebelde.getAcusacoes());
+
             if(rebelde.getAcusacoes()>=3){
                 rebelde.setTraidor(true);
-                System.out.println( rebelde);
-                return rebelde;
-            }
+                rebeldeDTO.setTraidor(rebelde.isTraidor());
 
+                return rebeldeDTO;
+            }
+            return rebeldeDTO;
         }
 
     }

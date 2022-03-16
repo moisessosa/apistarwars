@@ -22,10 +22,10 @@ public class ReportarController {
         return reportar.listarTodosOsRebeldes();
     }
 
-    @GetMapping("/{id}")
-    public Rebelde reportarRebelde(@PathVariable("id") Long id){
+    @GetMapping("/reportar/{id}")
+    public RebeldeDTO reportarRebelde(@PathVariable("id") Long id){
         System.out.println("buscando pedido de id: " + id);
-        Rebelde rebelde = reportar.reportar(id);
+        RebeldeDTO rebelde = reportar.reportar(id);
         return rebelde;
     }
 }
