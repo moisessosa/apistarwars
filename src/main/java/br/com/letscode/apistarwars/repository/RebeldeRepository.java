@@ -15,6 +15,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Getter
 @Setter
@@ -74,5 +75,13 @@ public class RebeldeRepository {
     public List<Rebelde> getAll() {
 
         return rebeldes;
+    }
+
+    public  Rebelde getById(Long id) throws Exception {
+        List<Rebelde> rebeldesFiltrados = rebeldes.stream().filter(rebelde -> "id".compareTo(rebelde.getId().toString()) > 0).collect(Collectors.toList());
+        if (rebeldesFiltrados.size()>1) {
+            return rebeldesFiltrados.get(0);
+        }
+        throw new Exception();
     }
 }
