@@ -10,7 +10,9 @@ public class Item {
 
     private Long id;
     private TypeItem nome;
-    private Integer pontos;
     private Integer quantidade;
 
+    public Integer getPontos() {
+        return nome.getPonto() * quantidade;
+    }
 }
