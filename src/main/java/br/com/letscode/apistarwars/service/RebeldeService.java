@@ -1,8 +1,6 @@
 package br.com.letscode.apistarwars.service;
 
-import br.com.letscode.apistarwars.dto.ItemDTO;
-import br.com.letscode.apistarwars.dto.RebeldeDTO;
-import br.com.letscode.apistarwars.dto.RetornoRebeldeDTO;
+import br.com.letscode.apistarwars.dto.*;
 import br.com.letscode.apistarwars.entity.Inventario;
 import br.com.letscode.apistarwars.entity.Item;
 import br.com.letscode.apistarwars.entity.Localizacao;
@@ -29,11 +27,13 @@ public class RebeldeService {
         rebeldeEntidade.setIdade(rebeldeDTO.getIdade());
         rebeldeEntidade.setGenero(rebeldeDTO.getGenero());
 
+
         rebeldeEntidade.setLocalizacao(new Localizacao(Double.valueOf((Math.random()*1000)).longValue(),
                 rebeldeDTO.getLocalizacao().getLatitude(),
                 rebeldeDTO.getLocalizacao().getLongitude(),
                 rebeldeDTO.getLocalizacao().getNomeBase()));
         rebeldeEntidade.setInventario(rebeldeDTO.getInventario());
+
 
 //        List<Item> lista = new ArrayList<>();
 //        lista.addAll(rebeldeDTO.getInventario().getItensInventario().stream().collect());
@@ -66,6 +66,20 @@ public class RebeldeService {
         retornoRebeldeDTO.setInventario(rebelde.getInventario());
 
         return retornoRebeldeDTO;
+    }
+
+    public RetornaLocalizacaoRebeldeDTO atualizarLocalizacao(Long id, LocalizacaoDTO localizacao) throws Exception {
+        Localizacao novaLocalizacao = new Localizacao(Double.valueOf((Math.random() * 1000)).longValue(), localizacao.getLatitude(), localizacao.getLongitude(), localizacao.getNomeBase());
+        try {
+            Rebelde rebelde = rebeldeRepository.getById(id);
+            RetornoRebeldeDTO rebeldeAtualizado = deEntidadeParaDTO(rebelde);
+            rebeldeAtualizado.setLocalizacao(novaLocalizacao);
+            return new RetornaLocalizacaoRebeldeDTO(rebeldeAtualizado.getId(), novaLocalizacao.getLatitude(), novaLocalizacao.getLongitude(), novaLocalizacao.getNomeBase());
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception();
+        }
+
     }
 
 }

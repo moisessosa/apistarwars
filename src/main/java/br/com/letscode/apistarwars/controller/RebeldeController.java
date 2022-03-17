@@ -1,6 +1,8 @@
 package br.com.letscode.apistarwars.controller;
 
+import br.com.letscode.apistarwars.dto.LocalizacaoDTO;
 import br.com.letscode.apistarwars.dto.RebeldeDTO;
+import br.com.letscode.apistarwars.dto.RetornaLocalizacaoRebeldeDTO;
 import br.com.letscode.apistarwars.dto.RetornoRebeldeDTO;
 import br.com.letscode.apistarwars.service.RebeldeService;
 import br.com.letscode.apistarwars.service.ReportarService;
@@ -38,6 +40,13 @@ public class RebeldeController {
         RetornoRebeldeDTO retornoRebeldeDTO = this.rebeldeService.cadastrarRebeldeService(rebeldeDTO);
 
         return retornoRebeldeDTO;
+    }
+
+    @PutMapping("{id}/localizacao")
+    public RetornaLocalizacaoRebeldeDTO atualizarLocalizacao(@RequestBody LocalizacaoDTO localizacaoDTO, @RequestParam (name = "id")Long id) throws Exception {
+
+            return this.rebeldeService.atualizarLocalizacao(id, localizacaoDTO);
+
     }
 
 }
