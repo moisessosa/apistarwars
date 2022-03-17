@@ -7,32 +7,32 @@ Dessa forma, para cadastrar novos rebeldes utiliza-se o método POST, também in
 Como exemplo: 
 
 {
-    "nome": "Fulana",<br>
-    "idade": 30,<br>
-    "acusacoes": 0,<br>
-    "genero": "FEMININO",<br>
-    "localizacao": {<br>
-      "latitude": "45°92'3",<br>
-      "longitude": "90º87'6",<br>
-      "nomeBase": "TESTE"<br>
-    },<br>
-    "inventario": {<br>
-      "itensInventario": [<br>
-          {<br>
-              "id": 2,<br>
-              "nome":"COMIDA",<br>
-              "pontos": 1,<br>
-              "quantidade": 6<br>
-          },<br>
-          {<br>
-              "id": 2,<br>
-              "nome":"AGUA",<br>
-              "pontos": 2,<br>
-              "quantidade": 6<br>
-          }<br>
-        ]<br>
-    },<br>
-    "traidor": false<br>
+    "nome": "Fulana",
+    "idade": 30,
+    "acusacoes": 0,
+    "genero": "FEMININO",
+    "localizacao": {
+      "latitude": "45°92'3",
+      "longitude": "90º87'6",
+      "nomeBase": "TESTE"
+    },
+    "inventario": {
+      "itensInventario": [
+          {
+              "id": 2,
+              "nome":"COMIDA",
+              "pontos": 1,
+              "quantidade": 6
+          },
+          {
+              "id": 2,
+              "nome":"AGUA",
+              "pontos": 2,
+              "quantidade": 6
+          }
+        ]
+    },
+    "traidor": false
 }
 
 ### REPORTAR REBELDE
