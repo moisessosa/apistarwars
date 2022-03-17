@@ -5,6 +5,7 @@ api project to santander coders and letscode
 Para listar os rebeldes já cadastrados no Repository utilizar a URL http://localhost:8080/rebeldes, que podem ser obtidos por meio do método GET, que foi inserido na classe RebeldeController.
 Dessa forma, para cadastrar novos rebeldes utiliza-se o método POST, também inserido na classe RebeldeController, mas com suas funcionalidades (regras de negócio) feitas na classe RebeldeService. Caso seja inserido de forma correta, haverá uma resposta 201, que indica que a requisição foi bem sucedida e um novo rebelde foi criado.
 Como exemplo: 
+
 {
     "nome": "Fulana",
     "idade": 30,
@@ -33,6 +34,7 @@ Como exemplo:
     },
     "traidor": false
 }
+
 ### REPORTAR REBELDE
 
 Para denunciar um rebelde, use a URL http://localhost:8080/rebeldes/reportar/{id}, onde {id} deve ser substituído pelo id do rebelde a ser denunciado.
