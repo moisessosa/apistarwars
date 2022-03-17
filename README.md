@@ -79,14 +79,12 @@ Na URL é passado o id do rebelde como seu identificador, usa o Método PUT  htt
 
 
 ### RELATORIOS
-Usar URL  http://localhost:8080/relatorios usa o metodo GET
+Relatórios
+São quatro endpoints:
+1. http://localhost:8080/relatorios/porcentagem-traidores: Porcentagem de traidores
+2. http://localhost:8080/relatorios/porcentagem-rebeldes: Porcentagem de rebeldes
+3. http://localhost:8080/relatorios/qtde-media-itens: Quantidade média de cada tipo de recurso por rebelde
+4. http://localhost:8080/relatorios/pontos-perdidos-traidores: Pontos perdidos devido a traidores.
 
-- porcentagem de rebeldes
-Usar URL  http://localhost:8080/porcentagem-rebeldes
-
-- Quantidade media de item
-Usar URL  http://localhost:8080/qtde-media-itens 
-
-- Pontos perdidos por traidores
-Usar URL  http://localhost:8080/pontos-perdidos-traidores 
+Todos os endpoints respondem pelo verb GET.
 
