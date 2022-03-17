@@ -27,8 +27,14 @@ public class RebeldeService {
         rebeldeEntidade.setIdade(rebeldeDTO.getIdade());
         rebeldeEntidade.setGenero(rebeldeDTO.getGenero());
 
-        rebeldeEntidade.setLocalizacao(new Localizacao(Double.valueOf((Math.random() * 1000)).longValue(), rebeldeDTO.getLocalizacao().getLatitude(), rebeldeDTO.getLocalizacao().getLongitude(), rebeldeDTO.getLocalizacao().getNomeBase()));
-        //rebeldeEntidade.setInventario(rebeldeDTO.getInventario());
+
+        rebeldeEntidade.setLocalizacao(new Localizacao(Double.valueOf((Math.random()*1000)).longValue(),
+                rebeldeDTO.getLocalizacao().getLatitude(),
+                rebeldeDTO.getLocalizacao().getLongitude(),
+                rebeldeDTO.getLocalizacao().getNomeBase()));
+        rebeldeEntidade.setInventario(rebeldeDTO.getInventario());
+
+
 //        List<Item> lista = new ArrayList<>();
 //        lista.addAll(rebeldeDTO.getInventario().getItensInventario().stream().collect());
 //        rebeldeEntidade.setInventario();
