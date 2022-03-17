@@ -1,7 +1,7 @@
 # apistarwars
 api project to santander coders and letscode
 
-### CADASTRAR REBELDES
+<u>### CADASTRAR REBELDES</u>
 Para listar os rebeldes já cadastrados no Repository utilizar a URL http://localhost:8080/rebeldes, que podem ser obtidos por meio do método GET, que foi inserido na classe RebeldeController.
 Dessa forma, para cadastrar novos rebeldes utiliza-se o método POST, também inserido na classe RebeldeController, mas com suas funcionalidades (regras de negócio) feitas na classe RebeldeService. Caso seja inserido de forma correta, haverá uma resposta 201, que indica que a requisição foi bem sucedida e um novo rebelde foi criado.
 Como exemplo: 
@@ -35,7 +35,7 @@ Como exemplo:
     "traidor": false
 }
 
-### REPORTAR REBELDE
+<u>### REPORTAR REBELDE</u>
 
 Para denunciar um rebelde, use a URL http://localhost:8080/rebeldes/reportar/{id}, onde {id} deve ser substituído pelo id do rebelde a ser denunciado.
 
@@ -72,13 +72,13 @@ Isso usará um método get, em rebeldeController @GetMapping("/reportar/{id}"), 
 }
 
 
-### Atualizar localização do rebelde
+<u>### Atualizar localização do rebelde</u>
 
 Um rebelde possuir a capacidade de reportar sua última localização, armazenando a nova latitude, longitude, Base.
 Na URL é passado o id do rebelde como seu identificador, usa o Método PUT  http://localhost:8080/rebeldes/{id}/localizacao 
 
 
-### RELATORIOS
+<u>### RELATORIOS</u>
 Usar URL  http://localhost:8080/relatorios usa o metodo GET
 
 - porcentagem de rebeldes
